@@ -1,13 +1,6 @@
 <#
     .DESCRIPTION
         You can leverage this script to create multiple scheduled analytics rules from the analytics rules templates on github https://github.com/Azure/Azure-Sentinel/tree/master/Detections.
-        
-        Known Limitations
-            1. Associated tables in the rule query need to exist first for the rule to be created. Tables are generally created when you start ingesting data. 
-               If the table does not exist the rule creation will fail during the script run
-            2. YAML files in the github repo may have incorrect query column to entity mappings defined. The rule creation will fail during the script run. 
-               If you run across either sumbit an issue via github on the YAML file or fork the github repo and submit a pull request - https://github.com/Azure/Azure-Sentinel#contributing
-            3. A fair number of rule templates do not have values for required data connectors. Be aware when using the dataconnector filter parameter you may not get a complete list of rules that leverage associated tables
 
     .PARAMETER subscriptionId
         Specify the subscriptionID GUID where your Sentinel Workspace Resides
